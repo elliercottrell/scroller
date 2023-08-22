@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: "Andale Mono";
   text-transform: uppercase;
   background-image: url(images/Screenshot\ 2023-08-15\ at\ 20.43.46\ Medium.png);
@@ -23,31 +23,53 @@ section {
   justify-content: center;
   align-items: center;
   margin-top: 0px;
-}
+} */
 
 /* section:nth-child(even) {
   background-color: teal;
   color: white;
 } */
 
-.block {
-  display: block;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-img {
-  width: 300px;
+main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
 }
 
-@media (max-width: 500px) {
-  img {
-    width: 100px;
-  }
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 100%;
+}
 
-  main {
-    display: block;
-    height: 300px;
+.slider-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+}
 
-    position: absolute;
-    overflow: visible;
-  }
+.item {
+  flex: none;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(255, 224, 224);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid red;
 }
