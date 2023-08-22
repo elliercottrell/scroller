@@ -44,7 +44,7 @@ img {
   }
 
   main {
-    overflow-x: visible;
+    overflow-x: hidden;
     display: flex;
   }
 }
