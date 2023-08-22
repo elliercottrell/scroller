@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Andale Mono"; /*Can be any text*/
+  src: local("Andale Mono"), url("/font/AndaleMono.ttf") format("truetype");
+}
+
 body {
   font-family: "Andale Mono";
   text-transform: uppercase;
