@@ -1,34 +1,9 @@
-/* body {
+body {
   font-family: "Andale Mono";
   text-transform: uppercase;
-  background-image: url(images/Screenshot\ 2023-08-15\ at\ 20.43.46\ Medium.png);
-  background-size: cover;
+  /* background-image: url(images/Screenshot\ 2023-08-15\ at\ 20.43.46\ Medium.png);
+  background-size: cover; */
 }
-
-main {
-  overflow-x: hidden;
-  display: flex;
-}
-
-h1 {
-  margin-top: 50px;
-  text-align: center;
-  font-size: 40px;
-}
-
-section {
-  min-width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0px;
-} */
-
-/* section:nth-child(even) {
-  background-color: teal;
-  color: white;
-} */
 
 * {
   margin: 0;
@@ -67,9 +42,15 @@ main {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: rgb(255, 224, 224);
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 4px solid red;
+}
+
+img {
+  width: 450px;
+}
+
+h1 {
+  margin: 20px 0px;
 }
