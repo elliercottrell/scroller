@@ -44,7 +44,8 @@ img {
   }
 
   main {
-    overflow-x: scroll;
+    position: absolute;
+    overflow: hidden;
     display: flex;
   }
 }
