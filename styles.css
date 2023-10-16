@@ -2,46 +2,6 @@
   font-family: "Andale Mono"; /*Can be any text*/
   src: local("Andale Mono"), url("/font/AndaleMono.ttf") format("truetype");
 }
-.logo {
-  border-right: solid 1px black;
-  border-left: solid 1px black;
-}
-.logo_image {
-  max-width: 150px;
-  padding: 10px;
-}
-
-.menu {
-  border-right: solid 1px black;
-  border-left: solid 1px black;
-}
-
-.header {
-  position: fixed;
-  margin-top: 0px;
-
-  border-top: solid 1px black;
-  border-bottom: solid 1px black;
-  width: 100vw;
-  background-color: white;
-}
-
-.second_logo {
-  max-width: 700px;
-}
-
-.footer {
-  margin-top: 300px;
-  border-top: solid 1px black;
-  border-bottom: solid 1px black;
-}
-
-h1 {
-  font-family: baskerville;
-  font-style: italic;
-  font-size: 100px;
-  letter-spacing: 10px;
-}
 
 body {
   font-family: "Andale Mono";
