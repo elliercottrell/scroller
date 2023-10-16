@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>SCFROLLLS</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      main {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+      }
+
+      #slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        height: 100%;
+      }
+
+      #slider-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        justify-content: start;
+      }
+
+      #item {
+        flex: none;
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main></main>
+  </body>
+  <script>
+    let items = document.querySelectorAll("#item");
+    let slider = document.querySelector("#slider");
+    let sliderWidth;
+    let itemWidth;
+    let currentPos = 0;
+
+    function init() {
+      sliderWidth = slider.getBoundingClientRect().width;
+      itemWidth = sliderWidth / items.length;
+      document.body.style.height = `${
+        sliderWidth - (window.innerWidth - window.innerHeight)
+      }px`;
+    }
+
+    function setSliderWidth() {
+      let totalWidth = 0;
+      items.forEach((item) => {
+        totalWidth += item.offsetWidth;
+      });
+
+      slider.style.width = `${totalWidth}px`;
+    }
+
+    function animate() {
+      init();
+      setSliderWidth();
+      currentPos = window.scrollY;
+      slider.style.transform = `translateX(${-currentPos}px)`;
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+</html>
